@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Themer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="header">
+    <span class="logo">Themer.</span>
+    <div class="switcher">
+      <button class="switcher-btn active" data-theme="light">Light</button>
+      <button class="switcher-btn" data-theme="dark">Dark</button>
+      <button class="switcher-btn" data-theme="solarized">Solarized</button>
+      <button class="switcher-btn" data-theme="high-contrast">Contrast</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="bento">
+      <div class="span-8 hero-card card">
+        <div>
+          <p class="section-label">CSS Architecture</p>
+          <h1>Dynamic variables.<br>Zero javascript styling.</h1>
+          <p>Themes controlled entirely by registered @property CSS custom properties. Switching context changes a single data attribute on the root element.</p>
+        </div>
+        <div>
+          <a href="#vars" class="btn">Inspect Variables</a>
+        </div>
+      </div>
+      <div class="span-4 hero-sub">
+        <h2>4 Themes</h2>
+        <p>Light, Dark, Solarized, and High-Contrast. Handpicked palettes, not inverted defaults.</p>
+      </div>
+
+      <div class="span-4 card">
+        <h3>@property</h3>
+        <p>Variables registered with syntax color. Allows the browser to interpolate values for smooth transitions on theme switch.</p>
+      </div>
+      <div class="span-4 card">
+        <h3>Persistence</h3>
+        <p>Selection saved to localStorage. System preference checked on first visit using prefers-color-scheme.</p>
+      </div>
+      <div class="span-4 card">
+        <h3>Fallbacks</h3>
+        <p>If @property is unsupported, themes still switch instantly. Only the transition animation degrades.</p>
+      </div>
+
+      <div class="span-12" id="vars" style="margin-top: 1rem;">
+        <p class="section-label">Live Output</p>
+      </div>
+      <div class="span-12">
+        <div class="swatch-grid" id="swatches"></div>
+      </div>
+
+      <div class="span-12" style="margin-top: 2rem;">
+        <p class="section-label">Metrics</p>
+      </div>
+      <div class="span-3 stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">JS Recalcs</div>
+      </div>
+      <div class="span-3 stat">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Variables</div>
+      </div>
+      <div class="span-3 stat">
+        <div class="stat-num">0.4s</div>
+        <div class="stat-label">Transition</div>
+      </div>
+      <div class="span-3 stat">
+        <div class="stat-num">100</div>
+        <div class="stat-label">Lighthouse</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-copy">Themer.</span>
+      <span class="footer-copy">CSS Custom Properties</span>
+    </div>
+  </footer>
+
+  <script src="js/theme-switcher.js"></script>
+</body>
+</html>

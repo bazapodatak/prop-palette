@@ -1,0 +1,121 @@
+@property --bg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #F2F0EB;
+}
+@property --bg-secondary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #E8E6E1;
+}
+@property --fg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #111111;
+}
+@property --fg-muted {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #6B6B6B;
+}
+@property --accent {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #E63946;
+}
+@property --accent-hover {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #C52D39;
+}
+@property --card {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #FFFFFF;
+}
+@property --border {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #D4D4D4;
+}
+@property --shadow-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] {
+  --bg: #F2F0EB;
+  --bg-secondary: #E8E6E1;
+  --fg: #111111;
+  --fg-muted: #6B6B6B;
+  --accent: #E63946;
+  --accent-hover: #C52D39;
+  --card: #FFFFFF;
+  --border: #D4D4D4;
+  --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #0A0A0A;
+  --bg-secondary: #141414;
+  --fg: #EFEFEF;
+  --fg-muted: #888888;
+  --accent: #CCFF00;
+  --accent-hover: #B8E600;
+  --card: #161616;
+  --border: #2A2A2A;
+  --shadow-color: rgba(204, 255, 0, 0.04);
+}
+
+[data-theme="solarized"] {
+  --bg: #002B36;
+  --bg-secondary: #073642;
+  --fg: #93A1A1;
+  --fg-muted: #586E75;
+  --accent: #B58900;
+  --accent-hover: #D4A017;
+  --card: #073642;
+  --border: #094959;
+  --shadow-color: rgba(0, 43, 54, 0.5);
+}
+
+[data-theme="high-contrast"] {
+  --bg: #000000;
+  --bg-secondary: #1A1A1A;
+  --fg: #FFFFFF;
+  --fg-muted: #CCCCCC;
+  --accent: #FFFF00;
+  --accent-hover: #E6E600;
+  --card: #111111;
+  --border: #666666;
+  --shadow-color: rgba(255, 255, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="system"] {
+    --bg: #0A0A0A;
+    --bg-secondary: #141414;
+    --fg: #EFEFEF;
+    --fg-muted: #888888;
+    --accent: #CCFF00;
+    --accent-hover: #B8E600;
+    --card: #161616;
+    --border: #2A2A2A;
+    --shadow-color: rgba(204, 255, 0, 0.04);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme="system"] {
+    --bg: #F2F0EB;
+    --bg-secondary: #E8E6E1;
+    --fg: #111111;
+    --fg-muted: #6B6B6B;
+    --accent: #E63946;
+    --accent-hover: #C52D39;
+    --card: #FFFFFF;
+    --border: #D4D4D4;
+    --shadow-color: rgba(0, 0, 0, 0.06);
+  }
+}

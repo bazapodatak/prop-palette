@@ -1,0 +1,188 @@
+.logo {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.5rem;
+}
+
+.switcher {
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-radius: 100px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.switcher-btn {
+  padding: 0.4rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--fg-muted);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.switcher-btn.active {
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+.switcher-btn:hover:not(.active) {
+  color: var(--fg);
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px var(--shadow-color);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+  line-height: 1.6;
+  transition: color 0.5s ease;
+}
+
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.hero-card h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+
+.hero-card p {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.hero-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem;
+  background-color: var(--accent);
+  border-radius: 16px;
+  color: #000;
+  height: 100%;
+  transition: background-color 0.5s ease;
+}
+
+.hero-sub h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-sub p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  max-width: 300px;
+}
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.swatch {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.5s ease;
+}
+
+.swatch-color {
+  height: 48px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  transition: all 0.5s ease;
+}
+
+.swatch-name {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.swatch-value {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  word-break: break-all;
+  transition: color 0.5s ease;
+}
+
+.stat {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.5s ease;
+}
+
+.stat-num {
+  font-family: 'Instrument Serif', serif;
+  font-size: 3.5rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: color 0.5s ease;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.5s ease;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--fg);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
